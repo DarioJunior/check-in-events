@@ -5,5 +5,5 @@ public record EventRequestDTO(
     String details,
     Integer maximumAttendees
 ) {
-
+    
 }

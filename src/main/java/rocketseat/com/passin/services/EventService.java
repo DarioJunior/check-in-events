@@ -13,8 +13,8 @@ import rocketseat.com.passin.dto.event.EventResponseDTO;
 import rocketseat.com.passin.repositories.AttendeeRepository;
 import rocketseat.com.passin.repositories.EventRepository;
 
-@Service
 //@RequiredArgsConstructor
+@Service
 public class EventService {
     private final EventRepository eventRepository;
     private final AttendeeRepository attendeeRepository;

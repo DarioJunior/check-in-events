@@ -21,8 +21,8 @@ import rocketseat.com.passin.services.EventService;
 public class EventController {
     private final EventService service;
 
-    public EventController(EventController controller) {
-        this.service = controller.service;
+    public EventController(EventService service) {
+        this.service = service;
     }
 
     @GetMapping("/{id}")
