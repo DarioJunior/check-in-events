@@ -12,5 +12,4 @@ public class AttendeeController {
     public ResponseEntity<String> getTests() {
         return ResponseEntity.ok("Sucesso");
     }
-
 }
