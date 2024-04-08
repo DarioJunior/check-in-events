@@ -62,9 +62,12 @@ public class AttendeeService {
 
     public AttendeeBadgeResponseDTO getAttendeeBadge(String attendeeId, UriComponentsBuilder uriComponentsBuilder) {
         Attendee attendee = this.attendeeRepository.findById(attendeeId)
-                .orElseThrow(() -> new AttendeeNotFoundException("Attendee not found with ID: " + attendeeId));
+                                .orElseThrow(() -> new AttendeeNotFoundException("Attendee not found with ID: " + attendeeId));
 
-        var uri = uriComponentsBuilder.path("/attendees/{attendeeId}/check-in").buildAndExpand(attendee.getId()).toUri().toString();
+        var uri = uriComponentsBuilder.path("/attendees/{attendeeId}/check-in")
+                    .buildAndExpand(attendee.getId())
+                    .toUri()
+                    .toString();
 
         AttendeeBadgeDTO AttendeeBadgeDTO = new AttendeeBadgeDTO(
             attendee.getName(),
